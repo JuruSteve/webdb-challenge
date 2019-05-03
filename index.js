@@ -1,13 +1,15 @@
 const express = require('express')
 const helmet = require('helmet')
 const server = express()
-// const dishesRouter = require('./dishes-router')
+const projectsRouter = require('./routers/projectsRouter')
+const actionsRouter = require('./routers/actionsRouter')
 
 server.use(express.json())
 server.use(helmet())
 
 
-// server.use('api/dishes/', dishesRouter)
+server.use('/api/projects', projectsRouter)
+server.use('/api/actions', actionsRouter)
 
 const port = 3300
 server.listen(port, function () {
