@@ -1,0 +1,17 @@
+const express = require('express')
+const helmet = require('helmet')
+const server = express()
+const projectsRouter = require('./routers/projectsRouter')
+const actionsRouter = require('./routers/actionsRouter')
+
+server.use(express.json())
+server.use(helmet())
+
+
+server.use('/api/projects', projectsRouter)
+server.use('/api/actions', actionsRouter)
+
+const port = 3300
+server.listen(port, function () {
+  console.log(`\n=== Web API Listening on http://localhost:${port} ===\n`)
+})
