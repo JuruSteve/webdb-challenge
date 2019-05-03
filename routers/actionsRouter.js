@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
-      const actions = await Actions.getAction()
+      const actions = await Actions.getActions()
       console.log(actions)
       res.status(200).json(actions)
     } catch (error) {

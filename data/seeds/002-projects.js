@@ -6,8 +6,8 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('projects').insert([
         {
-          name:"project1",
-          description:"first project",
+          name:"project2",
+          description:"second project",
           isCompleted: false
         },
       ]);

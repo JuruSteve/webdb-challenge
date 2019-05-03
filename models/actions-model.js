@@ -2,7 +2,8 @@ const db = require('../data/dbConfig')
 
 module.exports = {
     addAction,
-    getActions
+    getActions,
+    getActionById
 }
 
 function addAction(action){
@@ -12,4 +13,9 @@ function addAction(action){
 
 function getActions(){
     return db('actions')
+}
+
+function getActionById(id){
+    console.log(id)
+    return db('actions').where({id})
 }

@@ -10,6 +10,11 @@ exports.seed = function(knex, Promise) {
           description:"first project",
           isCompleted: false
         },
+        {
+          name:"project2",
+          description:"second project",
+          isCompleted: false
+        },
       ]);
     });
 };
